@@ -1,5 +1,6 @@
 package com.epam.task3.package01;
 
+// TODO: DK: Тоже не очень понятно, почему это не Device
 public class Smartphone {
     private int batteryLevel;
     private Watch watch;
@@ -16,6 +17,7 @@ public class Smartphone {
     }
 
     public void callByName(String name) {
+        // TODO: DK: Сделано правлиьно. Единственное можно было проверить а есть ли такой номер, прежде чем пытаться на него звонить.
         String numberOfContact = phonebook.getPhoneNumber(name);
         phone.callByNumber(numberOfContact);
 
@@ -29,6 +31,7 @@ public class Smartphone {
         return watch;
     }
 
+    // TODO: Опять же возможно вместо простого возвращения калькулятора можно сделать методы sum и subtract и делегировать их калькулятору (Наподобие как ты сделал для метода callByName(String name)).
     public Calculator getCalc() {
         return calc;
     }

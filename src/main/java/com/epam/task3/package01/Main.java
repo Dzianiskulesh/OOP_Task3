@@ -1,6 +1,7 @@
 package com.epam.task3.package01;
 
 public class Main {
+    // TODO: DK: Это как раз тот случай когда классов стало достаточно много для того чтобы разделить их на несколько пакетов. Как минимум напрашивается отделить девайсы от эксепшенов.
     public static void main (String[] args) {
 
         Watch watch1 = new Watch();
@@ -18,6 +19,7 @@ public class Main {
         phone.callByNumber("+375447124368");
 
         Phonebook phonebook = new Phonebook();
+        // TODO: Всё-таки с точки зрения логики правильнее вызывать это через метод addСontact. Он проверяет на лубликат имени. По-моему при таком вызове старое имя перепишется новым номером.
         phonebook.getPhonesList().put("Peter", "+375441234567");
         phonebook.getPhoneNumber("Peter");
         phonebook.addContact("Alex", "+375447214368");
